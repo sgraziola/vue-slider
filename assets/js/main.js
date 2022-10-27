@@ -42,7 +42,7 @@ createApp ({
             this.hover = true;
             this.intervalId = setInterval(() => {
                 this.nextImg();
-            }, 1000);
+            }, 3000);
         },
 
         autoPlayOff(){
