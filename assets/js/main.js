@@ -49,8 +49,22 @@ createApp ({
     },
 
     methods: {
+        prevImg(){
+            this.activeImage--;
+            //console.log(this.activeImage);
+            //console.log(this.carousel.length);
+            //console.log(this);
+            if (this.activeImage < 0) {
+                this.activeImage = this.carousel.length - 1;
+            }
+        },
+        nextImg(){
+            this.activeImage++;
+            console.log(this.activeImage);
+            if (this.activeImage === this.carousel.length) {
+                this.activeImage = 0;
+            }
+        },
+    },
 
-
-    }
-
-}).mount("#app")
+}).mount("#app");
