@@ -77,6 +77,10 @@ createApp ({
 
         autoPlayOff(){
             clearInterval(this.intervalId)
+        },
+
+        activeThumb(index){
+            this.activeImage = index;
         }
 
     },
