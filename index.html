@@ -29,8 +29,8 @@
                 <div class="thumbs">
                     <div class="prev"></div>
                     <div class="next"></div>
-                    <div v-for="thumb in carousel" class="thumb">
-                        <img :src="carousel[activeImage].image" alt="Svezia" />
+                    <div v-for="(thumb, i) in carousel" class="thumb">
+                        <img :src="carousel[i].image" alt="Svezia" />
                     </div>
                     
                 </div>
