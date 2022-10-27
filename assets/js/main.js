@@ -14,6 +14,8 @@ createApp ({
     data (){
         return {
             activeImage : 0,
+            intervalId : "",
+            hover : "false",
             carousel : [
                     {
                         image: './assets/img/01.webp',
@@ -60,11 +62,23 @@ createApp ({
         },
         nextImg(){
             this.activeImage++;
-            console.log(this.activeImage);
+            //console.log(this.activeImage);
             if (this.activeImage === this.carousel.length) {
                 this.activeImage = 0;
             }
         },
+
+        autoPlayOn(){
+            this.hover = true;
+            this.intervalId = setInterval(() => {
+                this.nextImg();
+            }, 1000);
+        },
+
+        autoPlayOff(){
+            clearInterval(this.intervalId)
+        }
+
     },
 
 }).mount("#app");
