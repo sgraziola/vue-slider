@@ -30,7 +30,7 @@
                     <div class="prev" @click="prevImg" ></div>
                     <div class="next" @click="nextImg"></div>
                     <div :class=" activeImage === i ? 'active' : '' " v-for="(thumb, i) in carousel" @click="activeThumb(i)" class="thumb">
-                        <img :src="carousel[i].image" :alt="carousel[i].title" />
+                        <img :src="thumb.image" :alt="thumb.title" />
                     </div>
                     
                 </div>
